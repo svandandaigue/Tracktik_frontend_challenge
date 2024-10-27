@@ -1,6 +1,6 @@
-import { Address } from '@/types/address';
+import Address from '@/types/Address';
 
-export interface Contact {
+export default interface Contact {
 	id: string;
 	firstName: string;
 	lastName: string;

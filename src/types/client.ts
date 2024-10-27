@@ -1,4 +1,4 @@
-export interface Client {
+export default interface Client {
 	id: string;
 	givenName: string;
 	createdAt: Date;

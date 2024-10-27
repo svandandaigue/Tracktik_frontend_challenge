@@ -1,10 +1,14 @@
-import { Contact } from '@/types/contact';
+import Contact from '@/types/Contact';
+import Address from '@/types/Address';
 
-export interface Site {
+export default interface Site {
 	id: string;
 	clientId: string;
 	title: string;
 	createdAt: Date;
 	updatedAt: Date;
-	contacts: { main: Contact}
+	address: Address;
+	contacts: { main: Contact },
+	images: string[],
+	tags: string[]
 }

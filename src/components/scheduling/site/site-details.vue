@@ -2,6 +2,10 @@
 	<div></div>
 </template>
 
-<script>
+<script lang="ts">
+	import { defineComponent } from 'vue';
 
-</script>
+	export default defineComponent({
+
+	});
+</script> 
