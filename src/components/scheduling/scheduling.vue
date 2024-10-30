@@ -16,7 +16,7 @@
 		},
 		created() {
 			console.log('created');
-			store.dispatch('fetchAllSites');
+			store.dispatch('fetchSiteData');
 			console.log('returned')
 		},
 		methods: {

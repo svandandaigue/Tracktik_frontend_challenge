@@ -1,6 +1,11 @@
 <template>
-	<div class="site-row d-flex flex-row align-items-center border">
-		<img class="site-row_avatar" :src="site.images[0]" alt="avatar site image"/>
+	<div class="site-row d-flex flex-row align-items-center border" @click="$emit('click')">
+		<div v-if="showLeftArrow"
+			 class="d-flex align-items-center justify-content-center"
+			 style="margin-right:24px;">
+			<
+		</div>
+		<img class="site-row_avatar" :src="site.images[0]" alt="avatar site image" />
 		<div class="d-flex flex-column">
 			<div class="site-row_title">{{ site.title }}</div>
 			<div class="site-row_address">
@@ -10,8 +15,9 @@
 			</div>
 			<div class="site-row_contact">{{ siteContactName }}</div>
 		</div>
-		<div class="ml-auto d-flex align-items-center justify-content-center">
-			<i class="fa-solid fa-chevron-right"></i>
+		<div v-if="showRightArrow"
+			 class="ml-auto d-flex align-items-center justify-content-center">
+			>
 		</div>
 	</div>
 </template>
@@ -27,6 +33,14 @@
 			site: {
 				type: Object as PropType<Site>,
 				required: true
+			},
+			showLeftArrow: {
+				type: Boolean,
+				default: false
+			},
+			showRightArrow: {
+				type: Boolean,
+				default: true
 			}
 		},
 		computed: {
